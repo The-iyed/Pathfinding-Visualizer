@@ -20,10 +20,12 @@ a {
 }
 
 .node-grid{
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 
@@ -116,4 +118,49 @@ img{
 
 .node:hover{
   border: 2px solid rgb(57, 129, 185);
+}
+
+.reset{
+  background-color: #E91E63;
+    border: 1px solid #E91E63;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.popUp{
+  position: absolute;
+  top: 507px;
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #607D8B;
+  align-items: center;
+  font-family: monospace;
+  font-size: 25px;
 }
