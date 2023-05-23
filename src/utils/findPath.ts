@@ -1,25 +1,21 @@
 export function findShortestPath(gridArray: any[]) {
    if (gridArray.length == 0) return []
-   // Create a grid with the specified size
    const numRows = 15;
    const numCols = 30;
    const grid = Array.from({ length: numRows }, () => Array(numCols).fill(''));
  
-   // Set start, end, and wall positions on the grid
    gridArray.forEach(({ position, status }: any) => {
      const { row, col } = position;
      grid[row][col] = status;
    });
  
-   // Define possible movements: up, down, left, right
    const movements = [
-     { row: -1, col: 0 }, // up
-     { row: 1, col: 0 },  // down
-     { row: 0, col: -1 }, // left
-     { row: 0, col: 1 }   // right
+     { row: -1, col: 0 }, 
+     { row: 1, col: 0 }, 
+     { row: 0, col: -1 }, 
+     { row: 0, col: 1 }   
    ];
  
-   // Check if a position is valid (within grid boundaries and not a wall)
    function isValidPosition(row: any, col: any) {
      return (
        row >= 0 &&
@@ -30,7 +26,6 @@ export function findShortestPath(gridArray: any[]) {
      );
    }
  
-   // Breadth-first search algorithm to find the shortest path
    function bfs() {
      const queue = [{ row: startRow, col: startCol, path: [] }];
      const visited = new Set();
@@ -55,10 +50,9 @@ export function findShortestPath(gridArray: any[]) {
        }
      }
  
-     return null; // No path found
+     return null; 
    }
  
-   // Find the start and end positions
    let startRow : any, startCol: any;
    gridArray.forEach(({ position, status }:any) => {
      if (status === 'start') {
@@ -67,12 +61,10 @@ export function findShortestPath(gridArray: any[]) {
      }
    });
  
-   // Find the shortest path using BFS
    const shortestPath = bfs();
  
    return shortestPath;
  }
  
- // Example usage:
 
  

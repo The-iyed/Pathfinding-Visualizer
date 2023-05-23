@@ -10,7 +10,7 @@ import { transformArray } from "@/utils/transform";
 
 
 export default function ListNode() {
-  const { currentElement, setCurrentElement , setResult , result} = useAppContext();
+  const { currentElement , setResult , result} = useAppContext();
   const { object, setObject } = useAppContext();
   const numRows = 15;
   const numColumns = 30;
@@ -66,7 +66,7 @@ export default function ListNode() {
         cursor: "pointer",
       }}
     >
-      {grid}
+      {grid}       
     </div>
     
     <button className="button" onClick={()=>{setResult(findShortestPath(transformArray(object)) || [])}}>Submit</button>

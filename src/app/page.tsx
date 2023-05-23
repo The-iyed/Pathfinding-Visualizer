@@ -13,7 +13,6 @@ export default function Home() {
     <main>
       <nav className="header">Pathfinding Visualizer</nav>
       <h2>Pick Up Your Elements</h2>
-      {/* {currentElement && <h2>Your Choosing A  :  {currentElement}  Element ....</h2>} */}
       <div className="options">
         <div className="option" style={{border:currentElement == 'start' ? '4px solid green' : ''}} onClick={()=>{setCurrentElement('start')}}>
           <Image src={start} alt="image"></Image>
@@ -28,7 +27,6 @@ export default function Home() {
           <Image src={cross} alt="image"></Image>
         </div>
       </div>
-
       <div className="node-grid">
         <ListNode />
       </div>
